@@ -1,0 +1,17 @@
+// Title: Reverse Integer
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/reverse-integer/
+
+            # Push the digit onto the reversed number
+            reversed_num = reversed_num * 10 + pop
+            
+        # Reapply the original sign
+        final_result = sign * reversed_num
+        
+        # Final safety boundary sanity check
+        if final_result < INT_MIN or final_result > INT_MAX:
+            # This handles the exact boundary limit case
+            return 0
+            
+        return final_result
