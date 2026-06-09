@@ -1,0 +1,17 @@
+// Title: Median of Two Sorted Arrays
+            // Difficulty: Hard
+            // Language: Python3
+            // Link: https://leetcode.com/problems/median-of-two-sorted-arrays/
+
+                else:
+                    return (max(maxLeft1, maxLeft2) + min(minRight1, 
+                    minRight2)) / 2.0
+            
+            # If we are too far right in nums1, move left
+            elif maxLeft1 > minRight2:
+                high = partition1 - 1
+            # If we are too far left in nums1, move right
+            else:
+                low = partition1 + 1
+                
+        return 0.0
