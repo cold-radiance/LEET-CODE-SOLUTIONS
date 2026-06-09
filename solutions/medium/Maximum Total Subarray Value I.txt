@@ -1,0 +1,17 @@
+// Title: Maximum Total Subarray Value I
+            // Difficulty: Medium
+            // Language: Python3
+            // Link: https://leetcode.com/problems/maximum-total-subarray-value-i/
+
+        if len(nums) < 2:
+            return 0
+            
+        # Find the global maximum and global minimum in the array
+        global_max = max(nums)
+        global_min = min(nums)
+        
+        # The best single subarray value possible
+        best_single_value = global_max - global_min
+        
+        # Since we can repeat this exact subarray k times, multiply by k
+        return best_single_value * k
