@@ -1,0 +1,17 @@
+// Title: Maximum Total Subarray Value II
+            // Difficulty: Hard
+            // Language: Python3
+            // Link: https://leetcode.com/problems/maximum-total-subarray-value-ii/
+
+            
+            # Transition to neighboring smaller sub-segments
+            if L + 1 <= R:
+                if (L + 1, R) not in visited:
+                    visited.add((L + 1, R))
+                    heapq.heappush(heap, (-get_val(L + 1, R), L + 1, R))
+            if L <= R - 1:
+                if (L, R - 1) not in visited:
+                    visited.add((L, R - 1))
+                    heapq.heappush(heap, (-get_val(L, R - 1), L, R - 1))
+                    
+        return total_value
